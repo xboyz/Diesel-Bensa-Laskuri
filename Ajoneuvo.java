@@ -7,7 +7,7 @@ package projekti;
 
 /**
  *
- * @author Kiril Tsereh
+ * @author Xboyz Inc
  */
 public class Ajoneuvo {
     private double vakuutus, vero, kulutus;
