@@ -7,18 +7,19 @@ package projekti;
 
 /**
  *
- * @author Kiril Tsereh
+ * @author Xboyz Inc
  */
 public class Ajoneuvo {
     private double vakuutus, vero, kulutus;
     private String merkki, malli;
     
-    public Ajoneuvo(String uusiMerkki, String uusiMalli, double uusiVakuutus, double uusiVero, double uusiKulutus) {
+    public Ajoneuvo(String uusiMerkki, String uusiMalli, double uusiKulutus, double uusiVero, double uusiVakuutus) {
         merkki = uusiMerkki;
         malli = uusiMalli;
-        vakuutus = uusiVakuutus;
-        vero = uusiVero;
         kulutus = uusiKulutus;
+        vero = uusiVero;
+        vakuutus = uusiVakuutus;
+        pidr;
     }
     
 }
