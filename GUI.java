@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Kiril Tsereh
+ * @author Xboyz Inc
  */
 public class GUI extends JFrame {
     private AjoneuvOhjain ohjain;
