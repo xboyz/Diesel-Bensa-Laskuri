@@ -19,7 +19,6 @@ public class Ajoneuvo {
         kulutus = uusiKulutus;
         vero = uusiVero;
         vakuutus = uusiVakuutus;
-        pidr;
     }
     
 }
