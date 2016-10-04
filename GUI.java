@@ -8,7 +8,7 @@ package projekti;
  * and open the template in the editor.
  */
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 /**
  *
