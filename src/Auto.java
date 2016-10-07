@@ -29,6 +29,10 @@ public class Auto {
         return kulutus;
     }
     
+    public String pa() {
+        return pa;
+    }
+    
     
     
 }
