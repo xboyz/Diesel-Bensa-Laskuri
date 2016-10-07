@@ -54,7 +54,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setText("km/v arvio");
 
         seutu.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "PK-Seutu", "Tutun seutu", "Tampereen seutu", "Oulun seutu", "Jyväskylän seutu", "Porin seutu", "Seinäjoen seutu", "Koko Suomi" };
+            String[] strings = { "PK-Seutu", "Turun seutu", "Tampereen seutu", "Oulun seutu", "Jyväskylän seutu", "Porin seutu", "Seinäjoen seutu", "Koko Suomi" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -244,7 +244,7 @@ public class NewJFrame extends javax.swing.JFrame {
         
         Auto a1 = new Auto(pa, kulutus, vero, vakuutus);
         
-        double vk = vero + vakuutus + (1.42 * ((kmm/100) * kulutus));
+        double vk = a1.kvk() + (1.42 * ((kulj.km()/100) * a1.rKulutus()));
         String vuosikulut = String.format("%.2f", vk);
         a1vk.setText(vuosikulut);
     }//GEN-LAST:event_jButton1ActionPerformed

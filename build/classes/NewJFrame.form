@@ -122,7 +122,7 @@
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="8">
                     <StringItem index="0" value="PK-Seutu"/>
-                    <StringItem index="1" value="Tutun seutu"/>
+                    <StringItem index="1" value="Turun seutu"/>
                     <StringItem index="2" value="Tampereen seutu"/>
                     <StringItem index="3" value="Oulun seutu"/>
                     <StringItem index="4" value="Jyv&#xe4;skyl&#xe4;n seutu"/>
