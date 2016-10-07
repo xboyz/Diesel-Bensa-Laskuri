@@ -11,6 +11,10 @@
 public class Seutu {
     double hinta;
     
+    public Seutu() {
+        
+    }
+    
     
     public double pk(String pa) {
         if (pa == "98") {

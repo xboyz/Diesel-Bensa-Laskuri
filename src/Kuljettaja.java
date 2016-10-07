@@ -10,15 +10,23 @@
  */
 public class Kuljettaja {
     int km;
-    String seutu;
+    double hinta;
+    Seutu seutu = new Seutu();
+    
     
     public Kuljettaja(int uusiKm, String uusiSeutu) {
         km = uusiKm;
-        seutu = uusiSeutu;
     }
     
     public int km() {
         return km;
+    }
+    
+    public double hinta(String syotSeutu, String pa) {
+        if (syotSeutu == "PK-seutu") {
+            hinta = seutu.pk(pa);
+        }
+        return hinta;
     }
     
 }
