@@ -20,6 +20,7 @@ public class Auto {
         vakuutus = uusiVakuutus;
     }
     
+    // Kiinteät vuosikulut
     public double kvk() {
         double vkt = vero + vakuutus;
         return vkt;

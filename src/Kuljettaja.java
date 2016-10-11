@@ -10,15 +10,15 @@
  */
 public class Kuljettaja {
 
-    int km;                 //kilometrit
+    double km;                 //kilometrit
     double hinta;
     Seutu seutu = new Seutu();
 
-    public Kuljettaja(int uusiKm, String uusiSeutu) {
+    public Kuljettaja(double uusiKm, String uusiSeutu) {
         km = uusiKm;
     }
 
-    public int km() {
+    public double km() {
         return km;
     }
 

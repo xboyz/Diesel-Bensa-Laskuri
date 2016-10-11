@@ -34,7 +34,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         seutu = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
-        kuljIlm = new javax.swing.JLabel();
+        tasausText = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         a198 = new javax.swing.JRadioButton();
         a195 = new javax.swing.JRadioButton();
@@ -48,6 +48,7 @@ public class NewJFrame extends javax.swing.JFrame {
         a1vakuutus = new javax.swing.JTextField();
         a1vk = new javax.swing.JTextField();
         a1ilm = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         a298 = new javax.swing.JRadioButton();
@@ -62,6 +63,7 @@ public class NewJFrame extends javax.swing.JFrame {
         a2vakuutus = new javax.swing.JTextField();
         a2vk = new javax.swing.JTextField();
         a2ilm = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,7 +72,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setText("km/v arvio");
 
         seutu.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "PK-Seutu", "Turun seutu", "Tampereen seutu", "Oulun seutu", "Jyväskylän seutu", "Porin seutu", "Seinäjoen seutu", "Koko Suomi" };
+            String[] strings = { "PK-seutu", "Turun seutu", "Tampereen seutu", "Oulun seutu", "Jyväskylän seutu", "Porin seutu", "Seinäjoen seutu", "Koko Suomi" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -85,7 +87,7 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(kuljIlm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tasausText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane1)
@@ -107,9 +109,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(kuljIlm, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
+                .addComponent(tasausText, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Auto 1"));
@@ -145,28 +147,32 @@ public class NewJFrame extends javax.swing.JFrame {
         a1vk.setText("Kulut/vuosi");
         a1vk.setFocusable(false);
 
+        jLabel11.setText("Vuosikulut");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(a1ilm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(a198)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a195)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a1d))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a1kulutus, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a1vero, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a1vakuutus, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a1vk, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(a1ilm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(a198)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(a195)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(a1d))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a1kulutus, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a1vero, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a1vakuutus, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a1vk, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel11))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -193,7 +199,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(a1vakuutus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(a1ilm, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addGap(3, 3, 3)
                 .addComponent(a1vk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -238,28 +246,32 @@ public class NewJFrame extends javax.swing.JFrame {
         a2vk.setText("Kulut/vuosi");
         a2vk.setFocusable(false);
 
+        jLabel12.setText("Vuosikulut");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(a2ilm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(a298)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a295)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a2d))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a2kulutus, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a2vero, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a2vakuutus, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(a2vk, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(a2ilm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                            .addComponent(a298)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(a295)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(a2d))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a2kulutus, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a2vero, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a2vakuutus, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(a2vk, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel12))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -286,7 +298,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(a2vakuutus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(a2ilm, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addGap(4, 4, 4)
                 .addComponent(a2vk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -329,9 +343,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        int kmm = Integer.parseInt(txtKm.getText());
+        double kmm = Double.parseDouble(txtKm.getText());
         String seut = seutu.getSelectedValue();
-        kuljIlm.setText(seut);
         Kuljettaja kulj = new Kuljettaja(kmm, seut);
         double hinta;
         
@@ -362,6 +375,7 @@ public class NewJFrame extends javax.swing.JFrame {
         String a1vuosikulut = String.format("%.2f", auto1vk);
         a1vk.setText(a1vuosikulut);
         
+        
                 
         // 2 auton kamaa
         // Pakottaa valita polttoaineen
@@ -390,6 +404,14 @@ public class NewJFrame extends javax.swing.JFrame {
         String a2vuosikulut = String.format("%.2f", auto2vk);
         a2vk.setText(a2vuosikulut);
         
+        double tasausKm = ((a1.kvk() - a2.kvk())/((kulj.hinta(seut, a1.pa()) * a1.rKulutus()) - (kulj.hinta(seut, a2.pa()) * a2.rKulutus())))*100;
+        if (tasausKm < 0) {
+            tasausKm = tasausKm * (-1);
+        }
+        double tasausE = a2.kvk() + (kulj.hinta(seut, a2.pa()) * ((tasausKm/100) * a2.rKulutus()));
+        String sTasausKm = String.format("%.2f", tasausKm);
+        String sTasausE = String.format("%.2f", tasausE);
+        tasausText.setText("Kulut tasautuvat " + sTasausKm + "km kohdalla, jolloin ne ovat " + sTasausE + "€.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void a1vakuutusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1vakuutusActionPerformed
@@ -461,6 +483,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -473,8 +497,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel kuljIlm;
     private javax.swing.JList<String> seutu;
+    private javax.swing.JLabel tasausText;
     private javax.swing.JTextField txtKm;
     // End of variables declaration//GEN-END:variables
 }
