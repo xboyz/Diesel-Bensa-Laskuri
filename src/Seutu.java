@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Kiril Tsereh
+ * @author Xboyz Inc
  */
 public class Seutu {
     double hinta;
